@@ -1,0 +1,23 @@
+//import variables  
+@import 'variables'
+
+//align items to the center
+@mixin center
+    display: flex
+    justify-content: center
+    align-items: center
+
+//reusable button
+@mixin myButton()
+    padding: 1rem 1.2rem
+    color: $text-color
+    background: $gradient
+    text-decoration: none
+    border-radius: 3rem
+
+//border after title
+@mixin gradientBorder()
+    content: ''
+    height: 3px
+    width: 30%
+    background: $gradient

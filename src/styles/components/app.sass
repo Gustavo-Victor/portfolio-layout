@@ -1,0 +1,28 @@
+//import partials
+@import '../partials/variables'
+
+//portfolio div 
+#portfolio
+    display: flex
+    flex-wrap: wrap
+    padding: 3rem
+    gap: 3rem
+
+    h1
+        width: 100%
+        font-size: 4rem
+        margin-bottom: 4rem
+        background: $gradient
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+
+//media queries
+@media only screen and (max-width: 750px)
+    #portfolio
+        h1
+            font-size: 3rem
+            text-align: center
+
+@media only screen and (max-width: 475px)
+    #portfolio
+        padding: 1.5rem

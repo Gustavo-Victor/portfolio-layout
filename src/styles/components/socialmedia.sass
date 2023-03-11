@@ -1,0 +1,34 @@
+//import partials
+@import '../partials/variables'
+@import '../partials/mixins'
+
+//social media section
+#social-media 
+    @include center
+    gap: 1rem
+    margin: 1rem 0
+
+    .social-btn 
+        padding: .6rem 
+        background-color: $bg-color-secondary
+        color: #333 
+        font-size: 1.3rem 
+        @include center
+ 
+
+    #linkedin 
+        color: #0072b1
+
+    #github 
+        color: #555 
+
+
+    #instagram
+        color: #bc2abd
+
+    :hover 
+        background: $gradient
+        > svg 
+            color: $text-color    
+
+    

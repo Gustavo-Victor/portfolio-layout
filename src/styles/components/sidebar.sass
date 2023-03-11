@@ -1,0 +1,53 @@
+//import partials
+@import '../partials/variables'
+@import '../partials/mixins'
+
+//sidebar 
+#sidebar
+    background-color: $bg-color
+    flex: 1 1 0
+    border-radius: $container-border-radius
+    display: flex
+    align-items: center
+    flex-direction: column
+    position: relative
+    text-align: center
+    padding: 3rem 0
+
+    .avatar
+        max-width: 70%
+        border-radius: $container-border-radius
+        position: absolute
+        top: -3rem
+
+    .occupation
+        background-color: $bg-color-secondary
+        color: $text-color-secondary
+        border-radius: $card-border-radius
+        margin-top: 47%
+        padding: .8rem 1.2rem
+
+    .btn
+        @include myButton
+
+//media queries
+@media only screen and (max-width: 950px)
+    #sidebar
+        .avatar
+            width: 200px
+
+        .occupation
+            margin-top: 42%
+
+@media only screen and (max-width: 780px)
+
+    #sidebar
+        .occupation
+            margin-top: 7rem
+
+@media only screen and (max-width: 475px)
+    #sidebar
+        padding: 25px 0
+
+        .occupation
+            margin-top: 8rem

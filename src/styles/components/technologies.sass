@@ -1,0 +1,73 @@
+//import partials
+@import '../partials/variables'
+@import '../partials/mixins'
+
+//technologies section
+#technologies
+    margin-bottom: 1rem
+
+    .tech-grid
+        display: flex
+        flex-wrap: wrap
+        gap: 1.5rem
+        width: 100%
+
+        .tech-card
+            @include center
+            padding: 1rem
+            border: 1px solid #333
+            width: 45%
+            gap: 0.5rem
+            border-radius: $card-border-radius
+            color: $text-color-secondary
+
+            h3
+                color: $text-color
+                margin-bottom: 1rem
+
+            svg
+                font-size: 6rem
+
+        #html
+            svg
+                color: #e44d26
+
+        #css
+            svg
+                color: #1572b6
+
+        #js
+            svg
+                color: #f0db47
+
+        #nodejs
+            svg
+                color: #83cd29
+
+        #mysql
+            svg
+                color: #00618a
+
+        #react
+            svg
+                color: #61dafb
+
+//media queries
+@media screen and ( max-width: 930px)
+    #technologies
+        .tech-card
+            flex-direction: column
+            text-align: center
+
+@media only screen and (max-width: 780px)
+    #technologies
+        .tech-card
+            min-width: 100%
+            // min-width: 300px
+
+@media only screen and (max-width: 600px)
+    #technologies
+        .tech-grid
+            .tech-card
+                svg
+                    font-size: 3rem

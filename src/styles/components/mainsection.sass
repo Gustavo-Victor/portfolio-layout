@@ -1,0 +1,66 @@
+//import partials
+@import '../partials/variables'
+@import '../partials/mixins'
+
+//main section
+#main
+    background-color: $bg-color
+    max-width: 65%
+    flex: 2 1 0
+    width: auto
+    border-radius: $container-border-radius
+    padding: 3rem
+
+    h2
+        color: $text-color
+        font-size: 2.2rem
+        margin-bottom: 1.3rem
+        @include center
+        justify-content: flex-start
+        gap: 1rem
+
+        &::after
+            @include gradientBorder
+
+    section
+        display: flex
+        flex-direction: column
+
+    p
+        color: $text-color-secondary
+        margin-bottom: 1rem
+        line-height: 1.4rem
+
+    .btn
+        @include myButton
+        align-self: flex-start
+
+    #technologies
+        color: white
+
+    #projects
+        color: white
+
+//media queries
+@media only screen and (max-width: 780px)
+    #main
+        min-width: 100%
+        h2
+            position: relative
+
+            &::after
+                position: absolute
+                bottom: -6px
+                left: 0
+                width: 100%
+
+@media only screen and (max-width: 475px)
+    #main
+        flex: 1 1 1
+        padding: 1.5rem
+
+        h2
+            font-size: 1.5rem
+
+        p
+            font-size: .9rem
